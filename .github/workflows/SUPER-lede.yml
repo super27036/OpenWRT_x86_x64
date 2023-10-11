@@ -185,10 +185,10 @@ jobs:
         rm -rf openwrt-x86-64-generic-squashfs-rootfs.img.gz
         rm -rf openwrt-x86-64-generic-squashfs-combined-efi.vmdk
         rm -rf openwrt-x86-64-generic.manifest
-        mv openwrt-x86-64-generic-squashfs-combined-efi.img.gz superledetest-x86-64-squashfs-efi.img.gz
+        mv openwrt-x86-64-generic-squashfs-combined-efi.img.gz superlede-x86-64-squashfs-efi.img.gz
         popd
         make checksum
-        mv bin/targets/x86/64/sha256sums bin/targets/x86/64/superledetest-sha256sums
+        mv bin/targets/x86/64/sha256sums bin/targets/x86/64/superlede-sha256sums
         echo "GENERATE_STATUS=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to WeTransfer
