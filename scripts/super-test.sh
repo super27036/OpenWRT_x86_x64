@@ -165,10 +165,6 @@ cp -rf $GITHUB_WORKSPACE/tools/5G模组拨号脚本/5GModem/* package/base-files
 chmod -R a+x package/base-files/files/root/5GModem
 svn export https://github.com/Siriling/OpenWRT-MyConfig/trunk/configs/general/etc/crontabs package/base-files/files/etc/crontabs
 
-# Frp、Openclash、Argon设置
-cp -rf $GITHUB_WORKSPACE/PATCH/R2S/files/etc/* package/base-files/files/root/etc
-chmod -R a+x package/base-files/files/root/etc
-
 # 修改默认IP地址
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 
